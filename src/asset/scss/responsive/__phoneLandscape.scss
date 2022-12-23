@@ -1,0 +1,28 @@
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .hide__mobile {
+        display: none !important;
+    }
+
+
+    .show__mobile {
+        display: block !important;
+    }
+
+
+    // login page responsive
+    .loginHeader {
+        display: none;
+    }
+
+    #loginWrapper .container-fluid {
+        padding: 0px 20px;
+    }
+
+    .loginHeader .menuBoxRight nav ul li .btn {
+        font-size: 15px !important;
+    }
+
+    #loginWrapper .loginBox {
+        width: 100%;
+    }
+}

@@ -1,0 +1,26 @@
+@media (min-width: 768px) and (max-width: 991px) {
+    .title-xl {
+        font-size: 28px;
+    }
+
+    .title-xl {
+        font-size: 27px;
+    }
+
+    // login page responsive
+    .loginHeader .container-fluid {
+        padding: 0px 20px;
+    }
+
+    #loginWrapper .container-fluid {
+        padding: 0px 20px;
+    }
+
+    .loginHeader .menuBoxRight nav ul li .btn {
+        font-size: 15px !important;
+    }
+
+    #loginWrapper .loginBox {
+        width: 525px;
+    }
+}

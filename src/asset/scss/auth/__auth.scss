@@ -1,0 +1,222 @@
+.loginBody {
+    background-color: #E5E5E5;
+}
+
+.loginHeader {
+    background-color: transparent;
+    padding: 20px 0px;
+
+    .container-fluid {
+        padding: 0px 80px;
+    }
+
+    .menuBoxRight {
+        nav {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-left: 10px;
+
+                    .btn {
+                        font-weight: 600 !important;
+                        font-size: 17px !important;
+                        color: #5A617B !important;
+                    }
+
+                    .btn-primary {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+#loginWrapper {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: flex;
+    align-items: center;
+
+    .container-fluid {
+        padding: 0px 80px;
+    }
+
+    .loginBox {
+        background-color: #fff;
+        padding: 60px 50px;
+        border-radius: 30px;
+        min-height: 627px;
+        width: 545px;
+        float: right;
+
+        .lginTopHeader {
+            display: flex;
+            align-items: center;
+
+            .rightBox {
+                margin-left: 32px;
+
+                p {
+                    font-weight: 600;
+                    font-size: 17px;
+                    margin-top: 5px;
+                }
+
+                .tabBtnLink {
+                    margin-top: 12px;
+
+                    nav {
+                        ul {
+                            li {
+                                display: inline-block;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .loginFormArea {
+            margin-top: 50px;
+
+            .input__box {
+                margin-bottom: 15px;
+            }
+
+            .otpBox {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                input {
+                    width: 100px;
+                    text-align: center;
+                }
+            }
+
+            .forgotPass {
+                margin-top: 25px;
+
+                a {
+                    font-weight: 700;
+                    font-size: 17px;
+                    color: #F79824;
+                }
+            }
+
+            .actionsBtnForm {
+                margin-top: 40px;
+
+                .btn {
+                    flex: 1;
+                    width: 100%;
+                    margin-bottom: 15px;
+
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+
+            .alreadyLogin {
+                margin-top: 10px;
+            }
+
+            .imageUploadForm {
+                .previewImageBox {
+                    img {
+                        height: 170px;
+                        width: 170px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .uploadSelect {
+                    margin-top: 30px;
+
+                    .input__file {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        .emailPassReset {
+            h3 {
+                margin: 40px 0px 20px 0px;
+            }
+
+            p {
+                font-weight: 600;
+                font-size: 17px;
+
+                a {
+                    font-weight: 700;
+                    font-size: 17px;
+                    color: #F79824;
+                }
+            }
+        }
+    }
+}
+
+.loginMobileHeader {
+    display: none;
+    padding: 20px 0px;
+
+    .mobileHeaderToggle {
+        .btn {
+            float: right !important;
+        }
+    }
+}
+
+.loginHeaderSidebarMenu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    z-index: 99999999999999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+
+    .sidebarClose {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .menuBoxSidebar {
+        min-height: 100vh;
+        padding: 50px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        width: 100%;
+
+        nav {
+            flex: 1;
+        }
+    }
+}
+
+.loginHeaderSidebarMenu.toggle {
+    opacity: 1;
+    left: 0;
+    visibility: visible;
+}

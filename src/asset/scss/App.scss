@@ -1,0 +1,13 @@
+@import './global/_reset';
+@import './global/_color';
+@import './global/_uikit';
+@import './auth/_auth';
+
+// responsive scss file
+@import './responsive/_laptop';
+@import './responsive/_largeTab';
+@import './responsive/_tablet';
+@import './responsive/_phoneLandscape';
+@import './responsive/_phone';
+@import './responsive/_max991px';
+@import './responsive/_max767px';

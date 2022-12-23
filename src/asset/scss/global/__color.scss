@@ -1,0 +1,35 @@
+$brand: #2176FF;
+$brand-bg: #EAF2FE;
+
+// put your brand color here 
+.dark-100 {
+    color: #313A5A;
+}
+
+.dark-80 {
+    color: #5A617B;
+}
+
+.dark-40 {
+    color: #7B8CB5;
+}
+
+.dark-50 {
+    color: #989CAC;
+}
+
+.text-warning {
+    color: #F79824 !important;
+}
+
+.text-primary {
+    color: $brand;
+}
+
+.text-danger {
+    color: #E80B0B !important;
+}
+
+.text-success {
+    color: #009906 !important;
+}
