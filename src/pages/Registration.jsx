@@ -14,7 +14,7 @@ const authBgStyle={
 }
 
 
-function Login() {
+function Registration() {
   const {
     register,
     handleSubmit,
@@ -157,4 +157,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Registration

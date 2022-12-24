@@ -23,6 +23,9 @@ import Phone from '../asset/img/phone.svg'
 import Lock from '../asset/img/lock.svg'
 import Eye from '../asset/img/eye.svg'
 
+import AvatarUpload from '../asset/img/avatar-upload.svg'
+import CloundUpload from '../asset/img/cloud-upload.svg'
+
 
 export {
     React,
@@ -43,5 +46,8 @@ export {
     Phone,
     Lock,
     Eye,
+
+    AvatarUpload,
+    CloundUpload
 
 }

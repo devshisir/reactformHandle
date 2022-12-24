@@ -4,9 +4,6 @@ import {
   useForm,
   BrandLogo,
   User,
-  Lock,
-  Eye,
-  NavLink
 }from '../utils/GlobalImport'
 
 const authBgStyle={
@@ -14,14 +11,8 @@ const authBgStyle={
 }
 
 
-function Login() {
+function ForgotPassword() {
 // handle form submit
-// const { register, handleSubmit, setValue } = useForm({
-//   defaultValues: {
-//     email: '',
-//     password: '',
-//   },
-// });
 
 const {
   register,
@@ -32,7 +23,6 @@ const {
 } = useForm({
   defaultValues: { 
     email: "",
-    password: '',
   }
 });
 
@@ -66,7 +56,8 @@ React.useEffect(() => {
                       <img className="img-fluid" src={BrandLogo} alt="" />
                   </div>
                   <div className="rightBox">
-                      <h3 className="title-xl dark-100">Login as</h3>
+                      <h3 className="title-xl dark-100">Forget password</h3>
+                      <p className="dark-80">Enter your registered email address or mobile number to reset password.</p>
                   </div>
                 </div>
                 <div className="loginFormArea">
@@ -90,35 +81,9 @@ React.useEffect(() => {
                           {errors?.email?.type === "minLength" && <p>Please enter atlest 7 charecter</p>}
                       </div>
                     </div>
-                    {/* single input box */}
-                    <div className="input__box rightIconInput">
-                      <div className={`input-group ${errors.password ? "is-invalid" : ""} `}>
-                          <span className="input-group-text" id="basic-addon1">
-                            <img src={Lock} className="injectable" alt="" />
-                          </span>
-                          <div className="form-floating floting__input flex-1">
-                            <input {...register("password", { required: true, minLength: 6, })}  type="password" className={`form-control ${errors.email ? "is-invalid" : ""}`} id="floatingInput2" placeholder="name@example.com" />
-                            <label htmlFor="floatingInput2">Enter passsword</label>
-                          </div>
-                          <div className="rightIconBox">
-                            <a href="/">
-                              <img className="injectable" src={Eye} alt="" />
-                            </a>
-                          </div>
-                      </div>
-                      <div className="error-message">
-                          {errors?.password?.type === "required" && <p>Please enter your password</p>}
-                          {errors?.password?.type === "minLength" && <p>Please enter atlest 6 charecter</p>}
-                      </div>
-                    </div>
-                    {/* forgot pass */}
-                    <div className="forgotPass">
-                        <NavLink to="forgot-password">Forget password?</NavLink>
-                    </div>
                     {/* form actions */}
                     <div className="actionsBtnForm">
-                        <button type='submit' className="btn btn-primary">Login</button>
-                        <NavLink to='registration' className="btn btn-transparent">Create a new account</NavLink>
+                        <button type='submit' className="btn btn-primary">Reset password</button>
                     </div>
                   </form>
                 </div>
@@ -131,4 +96,4 @@ React.useEffect(() => {
   )
 }
 
-export default Login
+export default ForgotPassword
