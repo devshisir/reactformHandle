@@ -3,10 +3,15 @@ import {
   React,
   useForm,
   BrandLogo,
+  LogoLogin,
   NavLink,
   User2,
   Email,
   Phone,
+  AvatarUpload,
+  CloundUpload,
+  Lock,
+  Eye,
 }from '../utils/GlobalImport'
 
 const authBgStyle={
@@ -26,6 +31,8 @@ function Registration() {
       admincode: '',
       email: '',
       phone: '',
+      password: '',
+      
     }
   });
   const onSubmit = (data) => {
@@ -44,6 +51,36 @@ function Registration() {
 
   return (
     <div className="loginBody">
+      <div className="loginHeader">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-xl-3 col-lg-3 col-md-3">
+              <div className="logoArea">
+                <a href="https://habrie.com/">
+                  <img className="img-fluid" src={LogoLogin} alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="loginMobileHeader">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-8">
+              <div className="logoBox">
+                <a href="https://habrie.com/">
+                  <img
+                    className="injectable"
+                    src={LogoLogin}
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="loginWrapper" style={authBgStyle}>
         <div className="container-fluid">
           <div className="row justify-content-end">
@@ -55,10 +92,36 @@ function Registration() {
                   </div>
                   <div className="rightBox">
                       <h3 className="title-xl dark-100">Register</h3>
+                      <div className="tabBtnLink">
+                        <nav>
+                          <ul>
+                            <li>
+                              <button type="button" className="btn btn-transparent active">School admin</button>
+                            </li>
+                            <li>
+                              <button type="button" className="btn btn-transparent null">Teacher</button>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
                   </div>
                 </div>
                 <div className="loginFormArea">
                   <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="imageUploadForm mb-4">
+                      <div className="previewImageBox text-center">
+                          <img className="img-fluid" src={AvatarUpload} alt="" />
+                      </div>
+                      <div className="uploadSelect">
+                          <div className="input__file">
+                              <input type="file" id="file__select" name="file" />
+                              <label className="file__select__handle text-center" htmlFor="file__select">
+                                  <img src={CloundUpload} className="injectable icon" alt="" />
+                                  <span className="dark-40">Change photo</span>
+                              </label>
+                            </div>
+                      </div>
+                    </div>
                     {/* single input box */}
                     <div className="input__box">
                       <div className={`input-group ${errors.name ? "is-invalid" : ""} `}>
@@ -69,8 +132,8 @@ function Registration() {
                           <div className="form-floating floting__input flex-1">
                             <input {...register("name", { required: true, minLength: 5, } )}  type="text" 
                             className={`form-control ${errors.name ? "is-invalid" : ""}`} 
-                            id="nameFloat" placeholder="Enter your name" />
-                            <label htmlFor="nameFloat">Enter your name</label>
+                            id="nameFloat" placeholder="Full name" />
+                            <label htmlFor="nameFloat">Full name</label>
                           </div>
                       </div>
                       <div className="error-message">
@@ -111,7 +174,7 @@ function Registration() {
                             type="email" 
                             className={`form-control ${errors.email ? "is-invalid" : ""}`} 
                             id="emailFloat" placeholder="Enter your email" />
-                            <label htmlFor="emailFloat">Enter your email</label>
+                            <label htmlFor="emailFloat">Email address</label>
                           </div>
                       </div>
                       <div className="error-message">
@@ -131,12 +194,54 @@ function Registration() {
                             <input {...register("phone", { required: true, minLength: 5, } )}  type="text" 
                             className={`form-control ${errors.phone ? "is-invalid" : ""}`} 
                             id="phoneFloat" placeholder="Enter phone" />
-                            <label htmlFor="phoneFloat">Enter phone number</label>
+                            <label htmlFor="phoneFloat">Phone number</label>
                           </div>
                       </div>
                       <div className="error-message">
                           {errors?.phone?.type === "required" && <p>Please enter your phone number</p>}
                           {errors?.phone?.type === "minLength" && <p>Please enter atlest 5 charecter</p>}
+                      </div>
+                    </div>
+                    {/* single input box */}
+                    <div className="input__box rightIconInput">
+                      <div className={`input-group ${errors.password ? "is-invalid" : ""} `}>
+                          <span className="input-group-text" id="basic-addon1">
+                            <img src={Lock} className="injectable" alt="" />
+                          </span>
+                          <div className="form-floating floting__input flex-1">
+                            <input {...register("password", { required: true, minLength: 6, })}  type="password" className={`form-control ${errors.email ? "is-invalid" : ""}`} id="floatingInput2" placeholder="name@example.com" />
+                            <label htmlFor="floatingInput2">Enter passsword</label>
+                          </div>
+                          <div className="rightIconBox">
+                            <a href="/">
+                              <img className="injectable" src={Eye} alt="" />
+                            </a>
+                          </div>
+                      </div>
+                      <div className="error-message">
+                          {errors?.password?.type === "required" && <p>Please enter your password</p>}
+                          {errors?.password?.type === "minLength" && <p>Please enter atlest 6 charecter</p>}
+                      </div>
+                    </div>
+                    {/* single input box */}
+                    <div className="input__box rightIconInput">
+                      <div className={`input-group ${errors.password ? "is-invalid" : ""} `}>
+                          <span className="input-group-text" id="basic-addon1">
+                            <img src={Lock} className="injectable" alt="" />
+                          </span>
+                          <div className="form-floating floting__input flex-1">
+                            <input {...register("password", { required: true, minLength: 6, })}  type="password" className={`form-control ${errors.email ? "is-invalid" : ""}`} id="floatingInput2" placeholder="name@example.com" />
+                            <label htmlFor="floatingInput2">Confirm password</label>
+                          </div>
+                          <div className="rightIconBox">
+                            <a href="/">
+                              <img className="injectable" src={Eye} alt="" />
+                            </a>
+                          </div>
+                      </div>
+                      <div className="error-message">
+                          {errors?.password?.type === "required" && <p>Please enter your password</p>}
+                          {errors?.password?.type === "minLength" && <p>Please enter atlest 6 charecter</p>}
                       </div>
                     </div>
                     {/* form actions */}

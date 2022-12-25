@@ -16,6 +16,7 @@ import
 import { useForm } from "react-hook-form";
 
 import BrandLogo from '../asset/img/brand-logo.svg'
+import LogoLogin from '../asset/img/logo-login.svg'
 import User from '../asset/img/user.svg'
 import User2 from '../asset/img/user2.svg'
 import Email from '../asset/img/email.svg'
@@ -40,6 +41,7 @@ export {
     useParams,
 
     BrandLogo,
+    LogoLogin,
     User,
     User2,
     Email,

@@ -10,6 +10,9 @@ import ResetLinkSend from './pages/RsetLinkSend'
 import ResetPassword from './pages/ResetPassword'
 import UserImageUpload from './pages/UserImageUpload'
 
+// error page
+import Error404 from './pages/404'
+
 function routes() {
   return (
     <Routes>
@@ -21,6 +24,7 @@ function routes() {
         <Route path='/reset-link-send' element={<ResetLinkSend/>} />
         <Route path='/password-reset' element={<ResetPassword/>} />
         <Route path='/image-upload' element={<UserImageUpload/>} />
+        <Route path='*' element={<Error404 />} />
     </Routes>
   )
 }

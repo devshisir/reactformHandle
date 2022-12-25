@@ -3,6 +3,7 @@ import {
   React,
   useForm,
   BrandLogo,
+  LogoLogin,
   User,
   Lock,
   Eye,
@@ -16,12 +17,6 @@ const authBgStyle={
 
 function Login() {
 // handle form submit
-// const { register, handleSubmit, setValue } = useForm({
-//   defaultValues: {
-//     email: '',
-//     password: '',
-//   },
-// });
 
 const {
   register,
@@ -33,6 +28,7 @@ const {
   defaultValues: { 
     email: "",
     password: '',
+    pinPass: '',
   }
 });
 
@@ -56,6 +52,36 @@ React.useEffect(() => {
 
   return (
     <div className="loginBody">
+      <div className="loginHeader">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-xl-3 col-lg-3 col-md-3">
+              <div className="logoArea">
+                <a href="https://habrie.com/">
+                  <img className="img-fluid" src={LogoLogin} alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="loginMobileHeader">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-8">
+              <div className="logoBox">
+                <a href="https://habrie.com/">
+                  <img
+                    className="injectable"
+                    src={LogoLogin}
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="loginWrapper" style={authBgStyle}>
         <div className="container-fluid">
           <div className="row justify-content-end">
@@ -66,7 +92,7 @@ React.useEffect(() => {
                       <img className="img-fluid" src={BrandLogo} alt="" />
                   </div>
                   <div className="rightBox">
-                      <h3 className="title-xl dark-100">Login as</h3>
+                      <h3 className="title-xl dark-100">Login</h3>
                   </div>
                 </div>
                 <div className="loginFormArea">
@@ -109,6 +135,22 @@ React.useEffect(() => {
                       <div className="error-message">
                           {errors?.password?.type === "required" && <p>Please enter your password</p>}
                           {errors?.password?.type === "minLength" && <p>Please enter atlest 6 charecter</p>}
+                      </div>
+                    </div>
+                    <p style={{ cursor: 'default' }} className="btn">OR</p>
+                    {/* single input box */}
+                    <div className="input__box">
+                      <div className={`input-group ${errors.pinPass ? "is-invalid" : ""} `}>
+                          <span className="input-group-text" id="basic-addon1">
+                            <img src={Lock} className="injectable" alt="" />
+                          </span>
+                          <div className="form-floating floting__input flex-1">
+                            <input {...register("pinPass", { minLength: 6, })}  type="text" className={`form-control ${errors.pinPass ? "is-invalid" : ""}`} id="floatingInput3" placeholder="name@example.com" />
+                            <label htmlFor="floatingInput2">Enter pin number</label>
+                          </div>
+                      </div>
+                      <div className="error-message">
+                          {errors?.pinPass?.type === "minLength" && <p>Please enter atlest 6 charecter</p>}
                       </div>
                     </div>
                     {/* forgot pass */}
