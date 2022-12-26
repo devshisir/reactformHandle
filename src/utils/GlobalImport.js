@@ -27,6 +27,8 @@ import Eye from '../asset/img/eye.svg'
 import AvatarUpload from '../asset/img/avatar-upload.svg'
 import CloundUpload from '../asset/img/cloud-upload.svg'
 
+import OcError from '../asset/img/oc-error.svg'
+import SubdomainErrorImg from '../asset/img/oc-maintenance.svg'
 
 export {
     React,
@@ -50,6 +52,9 @@ export {
     Eye,
 
     AvatarUpload,
-    CloundUpload
+    CloundUpload,
+
+    OcError,
+    SubdomainErrorImg,
 
 }

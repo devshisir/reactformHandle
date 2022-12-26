@@ -12,6 +12,7 @@ import UserImageUpload from './pages/UserImageUpload'
 
 // error page
 import Error404 from './pages/404'
+import SubdomainError from './pages/subdomainError'
 
 function routes() {
   return (
@@ -25,6 +26,7 @@ function routes() {
         <Route path='/password-reset' element={<ResetPassword/>} />
         <Route path='/image-upload' element={<UserImageUpload/>} />
         <Route path='*' element={<Error404 />} />
+        <Route path='/subdoaminerror' element={<SubdomainError />} />
     </Routes>
   )
 }
